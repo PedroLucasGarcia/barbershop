@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato & Agendamento — Royal Lion Studio</title>
+  <meta name="description" content="Agende seu horário na Royal Lion Studio pelo WhatsApp. Veja horários de funcionamento e como chegar." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600&family=Lora:ital,wght@0,600;0,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <img src="img/logo-royal-lion.png" alt="Logotipo Royal Lion Studio" class="logo-img" /> Royal <span class="two">Lion</span> Studio
+      </a>
+      <button class="btn-menu" aria-label="Abrir menu">☰</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Início</a></li>
+          <li class="dropdown">
+            <a href="servicos.html">Serviços</a>
+            <ul class="dropdown-menu">
+              <li><a href="servicos.html#barbearia">💈 Barbearia</a></li>
+              <li><a href="servicos.html#salao">💅 Salão de Beleza</a></li>
+            </ul>
+          </li>
+          <li><a href="equipe.html">Equipe</a></li>
+          <li><a href="contato.html" class="active">Contato</a></li>
+        </ul>
+      </nav>
+      <a href="contato.html" class="btn btn-green">Agendar</a>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <span class="eyebrow" style="text-align:center; display:block;">Agendamento</span>
+      <h1 class="section-title" style="color:var(--cream); font-size:clamp(1.8rem,5vw,2.8rem);">Reserve seu horário</h1>
+      <p class="section-sub">Preencha o formulário e o agendamento será enviado direto para o nosso WhatsApp. É rapidinho!</p>
+
+      <div class="contact-grid">
+        <!-- Formulário -->
+        <div class="form-card reveal">
+          <h3>Agendar pelo WhatsApp</h3>
+          <p>Você será levado ao WhatsApp com tudo já preenchido — só dar o "enviar".</p>
+          <form id="booking-form">
+            <div class="field-row">
+              <div class="field">
+                <label for="name">Seu nome</label>
+                <input type="text" id="name" name="name" placeholder="Ex.: João da Silva" required />
+              </div>
+              <div class="field">
+                <label for="phone">Telefone (opcional)</label>
+                <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000" />
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="service">Serviço</label>
+                <select id="service" name="service" required>
+                  <option value="" disabled selected>Selecione…</option>
+                  <optgroup label="Barbearia">
+                    <option>Corte masculino</option>
+                    <option>Corte + barba (combo)</option>
+                    <option>Barbear tradicional</option>
+                    <option>Acabamento / pezinho</option>
+                  </optgroup>
+                  <optgroup label="Salão de Beleza">
+                    <option>Corte feminino</option>
+                    <option>Escova modelada</option>
+                    <option>Coloração / mechas</option>
+                    <option>Tratamento capilar</option>
+                    <option>Manicure / Pedicure</option>
+                    <option>Design de sobrancelhas</option>
+                    <option>Maquiagem</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="field">
+                <label for="professional">Profissional</label>
+                <select id="professional" name="professional">
+                  <option value="">Sem preferência</option>
+                  <option>Ricardo Alves</option>
+                  <option>Diego Ferreira</option>
+                  <option>Camila Souza</option>
+                  <option>Juliana Lima</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="date">Data</label>
+                <input type="date" id="date" name="date" required />
+              </div>
+              <div class="field">
+                <label for="time">Horário</label>
+                <input type="time" id="time" name="time" min="09:00" max="20:00" step="1800" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="notes">Observações (opcional)</label>
+              <textarea id="notes" name="notes" rows="3" placeholder="Ex.: quero degradê baixo…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-whatsapp" style="width:100%;">📲 Enviar para o WhatsApp</button>
+          </form>
+        </div>
+
+        <!-- Informações -->
+        <div class="info-card reveal">
+          <h3>Onde nos encontrar</h3>
+          <div class="item">
+            <span class="ico">📍</span>
+            <div>
+              <strong>Endereço</strong>
+              Rua das Flores, 123 — Centro<br />Sua Cidade/UF, CEP 00000-000
+            </div>
+          </div>
+          <div class="item">
+            <span class="ico">📱</span>
+            <div>
+              <strong>WhatsApp</strong>
+              (11) 99999-9999
+            </div>
+          </div>
+          <div class="item">
+            <span class="ico">✉️</span>
+            <div>
+              <strong>E-mail</strong>
+              contato@royallionstudio.com.br
+            </div>
+          </div>
+          <div class="item">
+            <span class="ico">📸</span>
+            <div>
+              <strong>Instagram</strong>
+              @royallionstudio
+            </div>
+          </div>
+
+          <table class="hours">
+            <tr><td>Segunda a Sexta</td><td>09:00 — 20:00</td></tr>
+            <tr><td>Sábado</td><td>08:00 — 18:00</td></tr>
+            <tr><td>Domingo</td><td>Fechado</td></tr>
+            <tr class="closed"><td>Feriados</td><td>Fechado</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="light-section">
+    <div class="container" style="text-align:center;">
+      <h2 class="section-title">Como chegar</h2>
+      <p class="section-sub">Cole este endereço no Google Maps ou use o mapa abaixo (coloque aqui o embed real do Maps do seu endereço).</p>
+      <div class="card card-light" style="max-width:560px;margin:0 auto;padding:0;">
+        <div style="height:280px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 40%, rgba(201,138,138,.25), #f2e8e4 70%);border-radius:var(--radius);font-size:3.4rem;">
+          🗺️
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <a href="index.html" class="brand"><img src="img/logo-royal-lion.png" alt="Logotipo Royal Lion Studio" class="logo-img" /> Royal <span class="two">Lion</span> Studio</a>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="equipe.html">Equipe</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <small>© 2026 Royal Lion Studio — Todos os direitos reservados.</small>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
